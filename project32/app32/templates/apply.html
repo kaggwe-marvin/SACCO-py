@@ -1,0 +1,50 @@
+{% extends 'base.html' %}{% load static %} {% block content %}
+<div class="container my-2 bg-light">
+  <h1>LOAN APPLICATION</h1>
+</div>
+
+<div class="container">
+  <div class="row justify-content-center">
+    <div class="col-md-6">
+      <div class="card">
+        <div class="card-body">
+          <h3 class="card-title mb-4">Apply</h3>
+          <div class="form-floating mb-3 col-md-4">
+            <form
+              action="{% url 'app32:approval' %}"
+              method="POST"
+              class="bg-light">
+              {% csrf_token %}
+              <div class="row">
+                <div class="col">
+                  <label for="name" class="form-label">First name*</label>
+                  <div class="form-floating mb-3">{{ form.name }}</div>
+                </div>
+                <div class="col">
+                  <label for="email" class="form-label">Email*</label>
+                  <div class="form-floating mb-3">{{ form.email }}</div>
+                </div>
+              </div>
+
+              <label for="student_Id" class="form-label">Student Id*</label>
+              <div class="form-floating mb-3">{{ form.student_Id }}</div>
+              <label for="security" class="form-label"
+                >Security(Collateral)*</label
+              >
+              <div class="form-floating mb-3">{{ form.security }}</div>
+              <label for="amount" class="form-label">Amount*</label>
+              <div class="form-floating mb-3">{{ form.amount }}</div>
+              <button type="submit" class="btn btn-primary">apply</button>
+              <input
+                type="hidden"
+                name="next"
+                value="{% url 'app32:approval' %}" />
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% endblock content %}

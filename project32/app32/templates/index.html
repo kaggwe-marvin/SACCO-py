@@ -1,0 +1,98 @@
+{% extends 'base.html' %} {% block content %} {% load static %}
+ <div
+      id="myCarousel"
+      class="carousel slide container-fluid"
+      data-bs-ride="carousel"
+      data-bs-interval="5000">
+      <div class="carousel-indicators">
+        {% for photo in photos %}
+        <button
+          type="button"
+          data-bs-target="#myCarousel"
+          data-bs-slide-to="{{ forloop.counter0 }}"
+          {%
+          if
+          forloop.first
+          %}class="active"
+          {%
+          endif
+          %}
+          aria-current="true"
+          aria-label="Slide {{ forloop.counter }}"></button>
+        {% endfor %}
+      </div>
+      <div class="carousel-inner">
+        {% for photo in photos %}
+        <div class="carousel-item {% if forloop.first %}active{% endif %}">
+          <img
+            src="{% static 'photos/'|add:photo %}"
+            class="d-block w-100 carousel-image"
+            alt="{{ photo }}"
+            style="height: 400px; object-fit: cover" />
+          <div class="carousel-caption d-none d-md-block">
+            <h1>Savings, Loans and investments</h1>
+            <p>We've got you covered</p>
+          </div>
+        </div>
+
+        {% endfor %}
+      </div>
+      <button
+        class="carousel-control-prev"
+        type="button"
+        data-bs-target="#myCarousel"
+        data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button
+        class="carousel-control-next"
+        type="button"
+        data-bs-target="#myCarousel"
+        data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+    
+
+    <div class="container-fluid ">
+  <marquee behavior="slide" direction="left" ><h1>BACK OFFICE ACTIVITIES</h1></marquee>
+  <div class="d-md-flex flex-md-row flex-sm-column">
+    <div class="container" style="overflow: hidden">
+      <img
+        class="rounded img-fluid"
+        src="{% static 'photos/5.jpg' %}"
+        alt="" />
+      <h3>Emergencies</h3>
+      <p>Get loans for Emergencies</p>
+    </div>
+    <div class="container" style="overflow: hidden">
+      <img
+        class="rounded img-fluid"
+        src="{% static 'photos/2.jpg' %}"
+        alt="" />
+        <h3>Business</h3>
+        <p>Get loans for your business</p>
+    </div>
+    <div class="container" style="overflow: hidden">
+      <img
+        class="rounded img-fluid"
+        src="{% static 'photos/1.jpg' %}"
+        alt="" />
+      <h3>Education</h3>
+      <p>Get loans for your studies</p>
+    </div>
+  </div>
+</div>
+  </div>
+  <div class="container">
+    <a name="" id="" class="btn btn-outline-primary" href="{% url 'app32:about' %}" role="button">Know more</a>
+  </div>
+  
+  
+
+
+
+  {% endblock content %}
+

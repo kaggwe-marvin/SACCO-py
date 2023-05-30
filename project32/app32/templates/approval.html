@@ -1,0 +1,29 @@
+{% extends 'base.html' %}{% load static %} {% block content %}
+<div class="container my-2 bg-light">
+  <h1>Wait for approval</h1>
+</div>
+<div class="container-fluid bg-light py-4">
+  <div class="col">
+    <div class="row">
+      {% for item in approve %}
+      <div class="col-md-6">
+        <div class="card my-2">
+          <div class="card-body bg-light">
+            <h4 class="card-title">Loan Details For: {{item.name}}</h4>
+          </div>
+          <ul class="list-group list-group-flush my-2">
+            <li class="list-group-item">Collateral: {{item.security}}</li>
+            <li class="list-group-item">Amount asked: {{item.amount}}</li>
+          </ul>
+          <p class="card-text">
+            We shall send an email on <a href="#">{{item.email}}</a> on the
+            decision of your approval
+          </p>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</div>
+
+{% endblock content %}

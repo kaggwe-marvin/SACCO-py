@@ -1,0 +1,38 @@
+{% extends 'base.html' %}{% load static %} {% block content %}
+<div class="container my-2 bg-light">
+  <h1>Stay in touch with us</h1>
+</div>
+<div class="container my-2 py-4">
+  <div class="row justify-content-center">
+    <div class="col-md-6">
+      <div class="card">
+        <div class="card-body">
+          <h3 class="card-title mb-4">Apply</h3>
+          <form action="{% url 'app32:contact' %}" method="post" class="bg-light">
+    {% csrf_token %}
+    <div class="row">
+      <div class="col">
+        <label for="first_name" class="form-label">First name*</label>
+        <div class="form-floating mb-3">
+          {{form.name}}
+        </div>
+      </div>
+
+    <label for="first_name" class="form-label">Subject*</label>
+    <div class="form-floating mb-3">
+      {{form.subject}}
+    </div>
+    <label for="message" class="form-label">Message*</label>
+    <div class="form-floating mb-3">
+      {{form.message}}
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+{% endblock content %}
