@@ -1,0 +1,81 @@
+{% extends 'base.html' %}{% load static %} {% block content %}
+<div class="container my-2 bg-light">
+  <h1>OUR STORY</h1>
+</div>
+<div class="container-fluid">
+  <div class="container w-100" style="overflow: hidden">
+    <img class="rounded img-fluid" src="{% static 'photos/2.jpg' %}" alt="" />
+  </div>
+  <small class="text-muted">faded secondary text</small>
+</div>
+<div class="container-fluid bg-light my-4">
+  <div class="d-md-flex flex-md-row flex-sm-column">
+    <div class="container">
+      <h3>About us</h3>
+      <p>
+        In response to the need to empower every Mubs student wherever they are
+        to save and acquire credit facility at affordable rates on mobile
+        platform, the Directors of SACCO mooted the idea of a co-operative which
+        will embrace technological advancement in supporting & facilitating the
+        initiative and afterwards the SACCCO Ltd was formed
+      </p>
+    </div>
+    <div class="container">
+      <h3>Our Objectives</h3>
+      <p>
+        To mobilize funds, increase level of savings and investments for the
+        benefit of members and their families thereby improving socio-economic
+        welfare
+      </p>
+    </div>
+    <div class="container">
+      <h3>Our Mission</h3>
+      <p>
+        To facilitate savings and affordable credit in an efficient and
+        transparent manner in order to promote members welfare by enabling them
+        digital use and control their finances for economic prosperity
+      </p>
+    </div>
+    <div class="container">
+      <h3>Our Vision</h3>
+      <p>
+        To be a regional leading sacco of excellence in service delivery whose
+        members continue to realize economic indipendence and prosperity in a
+        Digital platform
+      </p>
+    </div>
+  </div>
+</div>
+<div class="container-fluid rounded">
+  <div class="card-body bg-light">
+    <h4 class="container-title">Company values</h4>
+    <p class="card-text lead">Core values</p>
+  </div>
+  <div class="row">
+    <div class="col">
+      <div class="container bg-light">
+        <ul class="list-group list-group-flush list-styled">
+          <li class="list-group-item">Democratic governances</li>
+          <li class="list-group-item">Inclusiveness</li>
+          <li class="list-group-item">Autonomy and development</li>
+          <li class="list-group-item">Participation</li>
+          <li class="list-group-item">Corporate social responsibility</li>
+          <li class="list-group-item">Building partnerships</li>
+        </ul>
+      </div>
+    </div>
+    <div class="col">
+      <div class="container bg-light">
+        <ol class="list-group list-group-flush">
+          <li class="list-group-item">Mutual respect</li>
+          <li class="list-group-item">Fairness and justice</li>
+          <li class="list-group-item">Transparency</li>
+          <li class="list-group-item">Environmental responsibility</li>
+          <li class="list-group-item">Accountabilty</li>
+          <li class="list-group-item">Intergrity</li>
+        </ol>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock content %}

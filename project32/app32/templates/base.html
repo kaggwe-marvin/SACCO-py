@@ -1,0 +1,140 @@
+{% load bootstrap5 %} {% bootstrap_css %}
+
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      body {
+        font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+      }
+    </style>
+    <title>mubsSACCO</title>
+  </head>
+  <body>
+    <div class="container-fluid my-2">
+      <nav class="navbar navbar-expand-sm navbar-light bg-light">
+        <div class="container">
+          <a class="navbar-brand" href="{% url 'app32:home' %}">mubsSACCO</a>
+          <button
+            class="navbar-toggler d-lg-none"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#collapsibleNavId"
+            aria-controls="collapsibleNavId"
+            aria-expanded="false"
+            aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="collapsibleNavId">
+            <ul class="navbar-nav me-auto mt-2 mt-lg-0">
+              <li class="nav-item">
+                <a
+                  class="nav-link active"
+                  href="{% url 'app32:home' %}"
+                  aria-current="page"
+                  >Home <span class="visually-hidden">(current)</span></a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="{% url 'app32:apply' %}"
+                  >Apply for loan</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="{% url 'app32:about' %}">About us</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="{% url 'app32:contact' %}"
+                  >Contact us</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </div>
+
+    {% block content %} {% endblock content %}
+    <div class="container-fluid my-2 bg-light">
+      <footer
+        class="text-center text-lg-start border border-white mt-xl-5 pt-4">
+        <div class="container p-4">
+          <div class="row">
+            <div class="col-lg-3 col-md-6 mb-4 mb-lg-0">
+              <h5 class="text-uppercase mb-4">About us</h5>
+
+              <ul class="list-unstyled mb-4">
+                <li>
+                  <a href="{% url 'app32:about' %}" class="text-muted"
+                    >Management</a
+                  >
+                </li>
+                <li>
+                  <a href="{% url 'app32:about' %}" class="text-muted"
+                    >contacts</a
+                  >
+                </li>
+                <li>
+                  <a href="{% url 'app32:about' %}" class="text-muted"
+                    >Rules and regulations</a
+                  >
+                </li>
+                <li>
+                  <a href="{% url 'app32:about' %}" class="text-muted"
+                    >collaborations</a
+                  >
+                </li>
+              </ul>
+            </div>
+            <div class="col-lg-3 col-md-6 mb-4 mb-lg-0">
+              <h5 class="text-uppercase mb-4">Products</h5>
+
+              <ul class="list-unstyled">
+                <li>
+                  <a href="{% url 'app32:apply' %}" class="text-muted"
+                    >student loan</a
+                  >
+                </li>
+                <li>
+                  <a href="{% url 'app32:apply' %}" class="text-muted"
+                    >emergency loans</a
+                  >
+                </li>
+                <li>
+                  <a href="{% url 'app32:apply' %}" class="text-muted"
+                    >business loans</a
+                  >
+                </li>
+              </ul>
+            </div>
+            <div class="col-lg-3 col-md-6 mb-4 mb-lg-0">
+              <h5 class="text-uppercase mb-4">Careers</h5>
+
+              <ul class="list-unstyled">
+                <li>
+                  <a href="{% url 'app32:contact' %}" class="text-muted"
+                    >Jobs</a
+                  >
+                </li>
+              </ul>
+            </div>
+            <div class="col-lg-3 col-md-6 mb-4 mb-lg-0">
+              <h5 class="text-uppercase mb-4">Sign up for loan</h5>
+              <a
+                href="{% url 'app32:apply' %}"
+                class="btn btn-outline-secondary btn-block">
+                Signup
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="text-center p-3 border-top border-white">
+          © 2023 Copyright:
+          <a class="text-black" href="https://www.mubsSACCO.com/">SACCO</a>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>
