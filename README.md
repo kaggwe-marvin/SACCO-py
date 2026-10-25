@@ -85,11 +85,7 @@ High-level layout:
    pip install -r requirements.txt
    ```
 
-> If Django is not installed through `requirements.txt` in your current version of the repo, install it explicitly:
->
-> ```bash
-> pip install django
-> ```
+`requirements.txt` installs Django 4.2, django-bootstrap-v5 and Pillow.
 
 ## Run the project
 
